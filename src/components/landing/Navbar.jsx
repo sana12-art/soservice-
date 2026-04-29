@@ -15,7 +15,8 @@ const navLinks = [
   },
   { label: 'Services', href: '#services' },
   { label: 'Rendez-vous', href: '#booking' },
-  { label: 'Blog', href: '/blog', isLink: true },
+
+
   { label: 'Contact', href: '#contact' },
 ];
 

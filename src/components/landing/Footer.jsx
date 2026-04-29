@@ -31,10 +31,12 @@ export default function Footer() {
               Navigation
             </h4>
             <div className="space-y-3">
-              {['Accueil', 'Notre Histoire', 'Services', 'Rendez-vous', 'Blog', 'Contact'].map(link => (
+              {['Accueil', 'Notre Histoire', 'Services', 'Rendez-vous', 'Contact'].map(link => (
+
                 <a
                   key={link}
-                  href={link === 'Blog' ? '/blog' : link === 'Notre Histoire' ? '/notre-histoire' : link === 'Nos Valeurs' ? '/nos-valeurs' : `#${link === 'Accueil' ? 'hero' : link === 'Nos Clients' ? 'clients' : link.toLowerCase()}`}
+href={link === 'Notre Histoire' ? '/notre-histoire' : link === 'Nos Valeurs' ? '/nos-valeurs' : `#${link === 'Accueil' ? 'hero' : link === 'Nos Clients' ? 'clients' : link.toLowerCase()}`}
+
                   className="block text-primary-foreground/70 hover:text-accent transition-colors text-sm font-body"
                 >
                   {link}

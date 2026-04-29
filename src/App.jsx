@@ -9,7 +9,8 @@ import Home from './pages/Home';
 import Admin from './pages/Admin';
 import NotreHistoire from './pages/NotreHistoire';
 import NosValeurs from './pages/NosValeurs';
-import Blog from './pages/Blog';
+
+
 // Add page imports here
 
 const AuthenticatedApp = () => {
@@ -42,7 +43,8 @@ const AuthenticatedApp = () => {
       <Route path="/admin" element={<Admin />} />
       <Route path="/notre-histoire" element={<NotreHistoire />} />
       <Route path="/nos-valeurs" element={<NosValeurs />} />
-      <Route path="/blog" element={<Blog />} />
+
+
       <Route path="*" element={<PageNotFound />} />
     </Routes>
   );
