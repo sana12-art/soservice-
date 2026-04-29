@@ -26,7 +26,7 @@ export default function ContactSection() {
     await Promise.all([
       base44.integrations.Core.SendEmail({
         to: form.email,
-        subject: 'Votre demande de devis KleanZ a bien été reçue',
+        subject: 'Votre demande de devis SoService a bien été reçue',
         body: `Bonjour ${form.name},\n\nNous avons bien reçu votre demande de devis et nous vous recontacterons sous 24h.\n\nVotre message : "${form.message}"\n\nÀ très bientôt,\nL'équipe KleanZ`,
       }),
       base44.integrations.Core.SendEmail({
