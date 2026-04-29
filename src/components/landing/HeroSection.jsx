@@ -52,7 +52,6 @@ export default function HeroSection() {
                   <Star key={i} className="w-3 h-3 text-accent fill-accent" />
                 ))}
               </div>
-              <span className="text-white/90 text-sm font-medium font-body ml-1">Entreprise familiale · Depuis 2018</span>
             </div>
           </motion.div>
 
