@@ -8,13 +8,13 @@ const stats = [
   { value: 'Île-de-France', label: 'Zone d\'intervention' },
 ];
 
-export default function HeroSection({ heroImage }) {
+export default function HeroSection() {
   return (
     <section id="hero" className="relative min-h-screen flex items-center overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
-          src={heroImage}
+          src="/assets/hero.png"
           alt="Espace professionnel impeccable"
           className="w-full h-full object-cover"
         />

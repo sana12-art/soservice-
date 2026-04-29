@@ -16,7 +16,7 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <img
-              src="/src/assets/logo soservice.png"
+              src="/assets/logo soservice.png"
               alt="SoService"
               className="h-12 w-auto rounded-lg"
             />
