@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 // logo import removed - use public URL
-const logo = '/logo%20soservice.png';
+const logo = '/logo soservice.png';
 
 const navLinks = [
   { label: 'Accueil', href: '#hero' },
