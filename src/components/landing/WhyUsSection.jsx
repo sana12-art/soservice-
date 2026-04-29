@@ -43,9 +43,11 @@ export default function WhyUsSection() {
           <motion.h2
             variants={fadeUp}
             custom={1}
-            className="font-heading font-extrabold text-4xl md:text-5xl text-foreground leading-tight whitespace-nowrap"
+            className="font-heading font-extrabold text-4xl md:text-5xl lg:text-6xl text-foreground leading-tight"
           >
-            La différence <span className="text-primary">kleanZ.</span>
+            <span className="bg-gradient-to-r from-foreground via-primary to-accent bg-clip-text text-transparent">La différence</span>
+            <br />
+            <span className="text-accent">SoService</span>
           </motion.h2>
 
           <motion.p

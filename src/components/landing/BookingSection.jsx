@@ -7,7 +7,7 @@ import { format, addDays, startOfDay, isSameDay } from 'date-fns';
 import { fr } from 'date-fns/locale';
 
 const MEETING_TYPES = [
-  { id: 'visite', label: 'Visite technique', desc: 'Un expert se déplace chez vous pour évaluer vos besoins', duration: '45 min', icon: MapPin },
+{ id: 'visite', label: 'Visite technique', desc: 'Le client se déplace chez l\'expert à Saint Ouen sur Seine pour évaluer vos besoins', duration: '45 min', icon: MapPin },
   { id: 'appel', label: 'Appel de découverte', desc: 'Échangez avec notre équipe pour définir votre projet', duration: '20 min', icon: Phone },
 ];
 
@@ -128,9 +128,10 @@ export default function BookingSection() {
             <div className="h-px w-8 bg-accent" />
             <span className="text-accent font-semibold text-sm tracking-widest uppercase font-body">Prise de Rendez-vous</span>
           </div>
-          <h2 className="font-heading font-extrabold text-4xl md:text-5xl text-foreground leading-tight">
-            Réservez votre<br />
-            <span className="text-primary">créneau en ligne.</span>
+          <h2 className="font-heading font-extrabold text-4xl md:text-5xl lg:text-6xl text-foreground leading-tight">
+            <span className="bg-gradient-to-r from-foreground via-primary to-accent bg-clip-text text-transparent">Réservez votre</span>
+            <br />
+            <span className="text-accent">créneau en ligne</span>
           </h2>
           <p className="text-muted-foreground text-lg font-body mt-4 max-w-xl">
             Visiter technique sur site ou appel de découverte — choisissez le format qui vous convient et réservez directement en quelques clics.

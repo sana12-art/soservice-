@@ -76,12 +76,12 @@ export default function Blog() {
         </div>
         <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-            <span className="text-accent font-semibold text-sm tracking-widest uppercase font-body">Blog KleanZ</span>
+            <span className="text-accent font-semibold text-sm tracking-widest uppercase font-body">Blog SoService</span>
             <h1 className="font-heading font-extrabold text-5xl md:text-6xl text-white mt-4 mb-4 leading-tight">
               Conseils & Actualités
             </h1>
             <p className="text-white/70 text-lg font-body max-w-xl mx-auto">
-              Astuces nettoyage, tendances éco-responsables et actualités de l'entreprise familiale KleanZ.
+              Astuces nettoyage, tendances éco-responsables et actualités de SoService.
             </p>
           </motion.div>
         </div>

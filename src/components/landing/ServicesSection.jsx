@@ -1,51 +1,57 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Building2, Home, HardHat, Sparkles, Users } from 'lucide-react';
+import { Building2, Home, HardHat, Sparkles } from 'lucide-react';
 import PriceCalculator from './PriceCalculator';
+import service1 from '@/assets/2.jpeg';
+import service2 from '@/assets/3.jpeg';
+import service3 from '@/assets/4.jpeg';
+import service4 from '@/assets/5.jpeg';
+import service5 from '@/assets/6.jpeg';
+import service6 from '@/assets/7.jpeg';
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
   visible: (i) => ({ opacity: 1, y: 0, transition: { duration: 0.5, delay: i * 0.08 } })
 };
 
-export default function ServicesSection({ images }) {
+export default function ServicesSection() {
   const services = [
     {
-      icon: Building2,
-      title: 'Nettoyage de Bureaux',
-      desc: 'Entretien régulier ou ponctuel de vos espaces professionnels. Des locaux impeccables pour une productivité maximale.',
-      image: images.desk,
-    },
-    {
       icon: Home,
-      title: 'Nettoyage Résidentiel',
-      desc: 'Prenez soin de votre intérieur avec un service sur mesure. Nous traitons chaque espace comme si c\'était le nôtre.',
-      image: images.living,
+      title: 'Nettoyage de maisons et d\'appartements',
+      desc: 'La société de nettoyage NOVA CLEAN intervient chez les particuliers et chez les professionnels en Seine et Marne, 77, Meaux, Melun, Chelles, Pontault Combault et toutes les villes du 77. Nettoyage de maisons et appartements, ménage après déménagement.',
+      image: service1,
     },
     {
       icon: HardHat,
-      title: 'Post-Chantier',
-      desc: 'Remise en état complète après travaux. Dépoussiérage, lessivage et polissage pour un résultat clé en main.',
-      image: images.conference,
+      title: 'Nettoyage de façades, bardages, toitures et gouttières',
+      desc: 'Expert en nettoyage de façades, bardages, démoussage de toitures et gouttières à Meaux et Melun. Solutions professionnelles pour redonner un coup d\'éclat à vos bâtiments.',
+      image: service2,
     },
     {
       icon: Sparkles,
-      title: 'Nettoyage Spécialisé',
-      desc: 'Vitrerie, moquettes, espaces médicaux… Des interventions techniques pointues avec le savoir-faire d\'experts certifiés.',
-      image: images.bathroom,
+      title: 'Nettoyage de logements insalubres et désinfection syndrome Diogène',
+      desc: 'Nettoyage d\'appartements insalubres, débarras de maisons très sales, désinfection après dégât des eaux, sinistre, inondation ou incendie. Devis gratuit dans la journée.',
+      image: service3,
     },
     {
-      icon: Users,
-      title: 'Équipe Professionnelle',
-      desc: 'Une équipe formée, équipée et engagée. Nous intervenons avec rigueur et discrétion dans tous vos espaces.',
-      image: images.team,
+      icon: Building2,
+      title: 'Nettoyage après travaux, bureaux & commerces',
+      desc: 'Nettoyage après travaux, nettoyage de bureaux et commerces. Entretien régulier ou ponctuel pour une propreté impeccable.',
+      image: service4,
     },
     {
       icon: Sparkles,
-      title: 'Équipements de Pointe',
-      desc: 'Machines professionnelles, produits certifiés et techniques avancées pour un résultat impeccable garanti.',
-      image: images.equipment,
+      title: 'Nettoyage et désinfection de moquettes, tapis et canapés',
+      desc: 'Nettoyage et désinfection de tapis et moquettes à domicile, nettoyage de canapé, désodorisation de moquettes.',
+      image: service5,
     },
+    {
+      icon: Sparkles,
+      title: 'Nettoyage et détachage de matelas et autres surfaces',
+      desc: 'Nettoyage et détachage de matelas, rénovation de marbre. Techniques efficaces et respectueuses de l\'environnement.',
+      image: service6,
+    }
   ];
 
   return (
@@ -74,9 +80,12 @@ export default function ServicesSection({ images }) {
           <motion.h2
             variants={fadeUp}
             custom={1}
-            className="font-heading font-extrabold text-4xl md:text-5xl text-foreground leading-tight whitespace-nowrap"
+            className="font-heading font-extrabold text-4xl md:text-5xl lg:text-6xl text-foreground leading-tight"
           >
-            Nous simplifions <span className="text-primary">le nettoyage.</span>
+<span className="bg-gradient-to-r from-foreground via-primary to-accent bg-clip-text text-transparent">
+Nous simplifions le nettoyage
+            </span>
+            <br />
           </motion.h2>
 
           <motion.p
@@ -152,7 +161,7 @@ export default function ServicesSection({ images }) {
               Vous ne savez pas quel service choisir ?
             </h3>
             <p className="text-primary-foreground/70 font-body">
-              Notre équipe est prête à écouter vos besoins et à vous proposer une solution sur mesure.
+              Contactez Nova Clean, la référence du nettoyage en Seine et Marne (77) avec son réseau de professionnels.
             </p>
           </div>
 
@@ -169,3 +178,4 @@ export default function ServicesSection({ images }) {
     </section>
   );
 }
+

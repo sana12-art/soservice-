@@ -13,7 +13,7 @@ import Footer from '../components/landing/Footer';
 import WhatsAppButton from '../components/landing/WhatsAppButton';
 
 const IMAGES = {
-  hero: 'https://media.base44.com/images/public/69e63cfe37163cac729de2ea/3b3423fc4_rocket_gen_img_19d685136-1764681426609.png',
+  hero: '/src/assets/2.jpeg',
   desk: 'https://media.base44.com/images/public/69e63cfe37163cac729de2ea/6f4700767_WhatsAppImage2026-04-09at1549551.jpg',
   living: 'https://media.base44.com/images/public/69e63cfe37163cac729de2ea/f849825c2_WhatsAppImage2026-04-09at1549552.jpg',
   conference: 'https://media.base44.com/images/public/69e63cfe37163cac729de2ea/c8e32bc21_WhatsAppImage2026-04-09at1549553.jpg',
@@ -32,9 +32,7 @@ export default function Home() {
       <HowItWorksSection />
       <ServicesSection images={{ desk: IMAGES.desk, living: IMAGES.living, conference: IMAGES.conference, bathroom: IMAGES.bathroom, team: IMAGES.team, equipment: IMAGES.equipment, specialist: IMAGES.specialist }} />
       <WhyUsSection />
-      <TestimonialsSection />
       <BookingSection />
-      <ClientsSection />
       <ContactSection />
       <Footer />
       <WhatsAppButton />

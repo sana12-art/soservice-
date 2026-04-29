@@ -32,12 +32,12 @@ export default function Navbar() {
   return (
     <>
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-scrolled ? 'bg-slate-100/90 backdrop-blur-xl shadow-xl border-b border-slate-200' : 'bg-transparent'
+scrolled ? 'bg-slate-800/90 backdrop-blur-xl shadow-2xl border-b border-slate-700' : 'bg-transparent'
       }`}>
         <div className="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between h-20">
 
           {/* Logo */}
-          <a href="#hero" className="flex items-center gap-2">
+          <a href="/" className="flex items-center gap-2">
             <SoserviceLogo dark={scrolled} />
           </a>
 
@@ -48,9 +48,8 @@ scrolled ? 'bg-slate-100/90 backdrop-blur-xl shadow-xl border-b border-slate-200
 
                 <a
                   href={link.href || "#"}
-                  className={`text-sm font-medium tracking-wide transition-colors duration-300 hover:text-accent ${
-                    scrolled ? 'text-foreground' : 'text-white'
-                  }`}
+className={`text-sm font-medium tracking-wide transition-colors duration-300 hover:text-accent text-white`}
+
                 >
                   {link.label}
                 </a>
@@ -84,7 +83,8 @@ scrolled ? 'bg-slate-100/90 backdrop-blur-xl shadow-xl border-b border-slate-200
           {/* Mobile Toggle */}
           <button
             onClick={() => setMobileOpen(true)}
-            className={`lg:hidden p-2 ${scrolled ? 'text-foreground' : 'text-white'}`}
+className={`lg:hidden p-2 text-white`}
+
           >
             <Menu className="w-6 h-6" />
           </button>

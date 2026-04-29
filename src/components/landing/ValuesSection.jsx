@@ -32,9 +32,10 @@ export default function ValuesSection() {
               <div className="h-px w-8 bg-accent" />
               <span className="text-accent font-semibold text-sm tracking-widest uppercase font-body">Nos Valeurs</span>
             </motion.div>
-            <motion.h2 variants={fadeUp} custom={1} className="font-heading font-extrabold text-4xl md:text-5xl text-foreground leading-tight">
-              Les piliers qui<br />
-              <span className="text-primary">nous guident.</span>
+            <motion.h2 variants={fadeUp} custom={1} className="font-heading font-extrabold text-4xl md:text-5xl lg:text-6xl text-foreground leading-tight">
+              <span className="bg-gradient-to-r from-foreground via-primary to-accent bg-clip-text text-transparent">Les piliers</span>
+              <br />
+              <span className="text-accent">qui nous guident</span>
             </motion.h2>
             <motion.p variants={fadeUp} custom={2} className="text-muted-foreground text-lg leading-relaxed mt-6 font-body max-w-md">
               Chaque valeur est vécue au quotidien, pas seulement affichée. Elles sont le fondement de notre réputation et de la confiance que nos clients nous accordent.

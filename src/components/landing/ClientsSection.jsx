@@ -38,8 +38,10 @@ export default function ClientsSection() {
           <motion.span variants={fadeUp} custom={0} className="text-accent font-semibold text-sm tracking-widest uppercase font-body">
             Ils nous font confiance
           </motion.span>
-          <motion.h2 variants={fadeUp} custom={1} className="font-heading font-extrabold text-4xl md:text-5xl text-foreground mt-4 leading-tight">
-            Plus de <span className="text-primary">60 partenaires</span>
+          <motion.h2 variants={fadeUp} custom={1} className="font-heading font-extrabold text-4xl md:text-5xl lg:text-6xl text-foreground leading-tight">
+            <span className="bg-gradient-to-r from-foreground via-primary to-accent bg-clip-text text-transparent">Plus de 60</span>
+            <br />
+            <span className="text-accent">partenaires</span>
           </motion.h2>
           <motion.p variants={fadeUp} custom={2} className="text-muted-foreground text-lg mt-4 font-body">
             Des institutions, entreprises et associations de renom nous confient leurs espaces en Île-de-France.

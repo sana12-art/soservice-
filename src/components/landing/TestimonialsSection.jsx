@@ -63,9 +63,10 @@ export default function TestimonialsSection() {
             <span className="text-accent font-semibold text-sm tracking-widest uppercase font-body">Témoignages</span>
             <div className="h-px w-8 bg-accent" />
           </div>
-          <h2 className="font-heading font-extrabold text-4xl md:text-5xl text-primary-foreground leading-tight">
-            Ils parlent mieux<br />
-            <span className="text-accent">que nous.</span>
+          <h2 className="font-heading font-extrabold text-4xl md:text-5xl lg:text-6xl text-foreground leading-tight">
+            <span className="bg-gradient-to-r from-foreground via-primary to-accent bg-clip-text text-transparent">Ils parlent mieux</span>
+            <br />
+            <span className="text-accent">que nous</span>
           </h2>
         </motion.div>
 

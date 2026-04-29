@@ -60,18 +60,18 @@ export default function HeroSection({ heroImage }) {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.3 }}
-            className="font-heading font-extrabold text-5xl md:text-6xl lg:text-[5.5rem] text-white leading-[1.05] mb-6"
+className="font-heading font-extrabold text-4xl md:text-5xl lg:text-6xl text-white leading-[1.05] mb-6 [text-shadow:0_4px_8px_rgba(0,0,0,0.8)] drop-shadow-2xl"
           >
-            D'un seau
+<span className="text-white [text-shadow:0_4px_8px_rgba(0,0,0,0.8)] drop-shadow-2xl">Nettoyage Professionnel</span>
             <br />
-            <span className="text-accent">à la référence.</span>
+            <span className="text-accent">Seine et Marne 77</span>
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
-            className="text-lg md:text-xl text-white/75 leading-relaxed mb-4 max-w-xl font-body"
+className="text-lg md:text-xl text-white leading-relaxed mb-4 max-w-xl font-body [text-shadow:0_2px_4px_rgba(0,0,0,0.6)]"
           >
             Nettoyer un espace, c'est prendre soin des personnes qui y vivent et travaillent. 
             Professionnalisme, confiance et humanité depuis plus de 6 ans.
