@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-import logo from "/assets/logo soservice.png";
+// logo import removed - use public URL
+const logo = '/logo%20soservice.png';
 
 const navLinks = [
   { label: 'Accueil', href: '#hero' },
