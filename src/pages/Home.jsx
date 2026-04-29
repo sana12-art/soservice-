@@ -27,7 +27,7 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       <Navbar />
-      <HeroSection heroImage={IMAGES.hero} />
+  <HeroSection />
       <StorySection />
       <HowItWorksSection />
       <ServicesSection images={{ desk: IMAGES.desk, living: IMAGES.living, conference: IMAGES.conference, bathroom: IMAGES.bathroom, team: IMAGES.team, equipment: IMAGES.equipment, specialist: IMAGES.specialist }} />
