@@ -70,13 +70,45 @@ export default function HowItWorksSection() {
           </motion.p>
         </motion.div>
 
-        {/* Steps Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5 gap-8">
-          {steps.map((step, i) => (
+{/* Steps Grid - 01-03 */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          {steps.slice(0, 3).map((step, i) => (
             <motion.div
               key={step.number}
               variants={fadeUp}
               custom={i + 3}
+              className="group relative bg-card/90 backdrop-blur-sm rounded-3xl p-8 border border-border/50 hover:border-primary hover:shadow-2xl hover:shadow-primary/20 transition-all duration-500 h-full cursor-pointer"
+              whileHover={{ y: -8, scale: 1.02 }}
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-all" />
+              
+              <div className="relative z-10">
+                {/* Number badge */}
+                <div className="mb-6">
+                  <span className="bg-gradient-to-r from-primary to-accent text-primary-foreground font-bold text-lg px-4 py-2 rounded-xl shadow-lg">
+                    {step.number}
+                  </span>
+                </div>
+
+                {/* Icon */}
+                <div className={`w-16 h-16 ${step.color} rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform`}>
+                  <step.icon className="w-8 h-8" />
+                </div>
+
+                <h3 className="font-heading font-bold text-xl text-foreground mb-4">{step.title}</h3>
+                <p className="text-muted-foreground leading-relaxed">{step.desc}</p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* 04-05 centered */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-3xl mx-auto mt-8">
+          {steps.slice(3).map((step, i) => (
+            <motion.div
+              key={step.number}
+              variants={fadeUp}
+              custom={6 + i}
               className="group relative bg-card/90 backdrop-blur-sm rounded-3xl p-8 border border-border/50 hover:border-primary hover:shadow-2xl hover:shadow-primary/20 transition-all duration-500 h-full cursor-pointer"
               whileHover={{ y: -8, scale: 1.02 }}
             >
