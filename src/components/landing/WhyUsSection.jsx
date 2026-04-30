@@ -55,7 +55,7 @@ export default function WhyUsSection() {
             custom={2}
             className="text-muted-foreground text-lg mt-6 font-body"
           >
-            Pas une société anonyme. Une famille qui a construit sa réputation contrat après contrat.
+Une entreprise locale engagée. Des professionnels passionnés qui mettent votre satisfaction au cœur de chaque intervention.
           </motion.p>
         </motion.div>
 
