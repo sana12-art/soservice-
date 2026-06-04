@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+timport React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Calculator, Send, ChevronDown, CheckCircle } from 'lucide-react';
+import { Calculator, Send, CheckCircle } from 'lucide-react';
 import { base44 } from '@/api/base44Client';
 import { toast } from 'sonner';
 
@@ -21,16 +21,21 @@ const FREQUENCIES = [
 const SURFACE_MIN = 20;
 const SURFACE_MAX = 2000;
 
-function computePrice(serviceId, frequencyId, surface) {
+function computePrice(serviceId, frequencyId, surface, isNewClient) {
   const service = SERVICE_TYPES.find(s => s.id === serviceId);
   const freq = FREQUENCIES.find(f => f.id === frequencyId);
   if (!service || !freq) return null;
   const base = service.base * freq.multiplier;
-  // Volume discount
+
+  // Remise volume
   let discount = 1;
   if (surface > 500) discount = 0.88;
   else if (surface > 200) discount = 0.93;
   else if (surface > 100) discount = 0.97;
+
+  // Promo nouveaux clients: -5% (option activée par l'utilisateur)
+  if (isNewClient) discount *= 0.95;
+
   const total = Math.round(surface * base * discount);
   const min = Math.round(total * 0.9);
   const max = Math.round(total * 1.1);
@@ -43,10 +48,11 @@ export default function PriceCalculator() {
   const [surface, setSurface] = useState(100);
   const [email, setEmail] = useState('');
   const [name, setName] = useState('');
+  const [isNewClient, setIsNewClient] = useState(false);
   const [sending, setSending] = useState(false);
   const [sent, setSent] = useState(false);
 
-  const price = computePrice(serviceId, frequencyId, surface);
+  const price = computePrice(serviceId, frequencyId, surface, isNewClient);
   const selectedService = SERVICE_TYPES.find(s => s.id === serviceId);
   const selectedFreq = FREQUENCIES.find(f => f.id === frequencyId);
 
@@ -235,6 +241,18 @@ ${name || 'Un visiteur de votre site'}
                   required
                   className="w-full h-11 px-4 rounded-xl border border-border bg-card text-foreground text-sm font-body focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary"
                 />
+                <label className="flex items-start gap-3 text-sm text-muted-foreground font-body">
+                  <input
+                    type="checkbox"
+                    checked={isNewClient}
+                    onChange={(e) => setIsNewClient(e.target.checked)}
+                    className="mt-1 h-4 w-4 accent-primary"
+                  />
+                  <span>
+                    Nouveau client ? Activez la promo <span className="font-semibold text-foreground">-5%</span>
+                  </span>
+                </label>
+
                 <button
                   type="submit"
                   disabled={sending || !email}

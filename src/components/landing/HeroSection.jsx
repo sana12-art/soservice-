@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { ArrowDown, Star, CheckCircle } from 'lucide-react';
 const stats = [
   { value: '60+', label: 'Clients B2B' },
-  { value: '6 ans', label: 'D\'expérience' },
+  { value: '20 ans', label: 'D\'expérience' },
   { value: '100%', label: 'Satisfaction client' },
   { value: 'Île-de-France', label: 'Zone d\'intervention' },
 ];
@@ -63,7 +63,7 @@ className="font-heading font-extrabold text-4xl md:text-5xl lg:text-6xl text-whi
           >
 <span className="text-white [text-shadow:0_4px_8px_rgba(0,0,0,0.8)] drop-shadow-2xl">Nettoyage Professionnel</span>
             <br />
-            <span className="text-accent">Seine et Marne 77</span>
+            <span className="text-accent">Bobigny 93000</span>
           </motion.h1>
 
           <motion.p
@@ -73,7 +73,7 @@ className="font-heading font-extrabold text-4xl md:text-5xl lg:text-6xl text-whi
 className="text-lg md:text-xl text-white leading-relaxed mb-4 max-w-xl font-body [text-shadow:0_2px_4px_rgba(0,0,0,0.6)]"
           >
             Nettoyer un espace, c'est prendre soin des personnes qui y vivent et travaillent. 
-            Professionnalisme, confiance et humanité depuis plus de 6 ans.
+            Professionnalisme, confiance et humanité depuis plus de 20 ans.
           </motion.p>
 
           {/* Trust points */}

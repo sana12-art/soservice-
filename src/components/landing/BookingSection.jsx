@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Calendar, Clock, Phone, MapPin, CheckCircle, ChevronLeft, ChevronRight, User, Mail, MessageSquare } from 'lucide-react';
+import { Calendar, Clock, Phone, MapPin, CheckCircle, ChevronLeft, ChevronRight } from 'lucide-react';
 import { base44 } from '@/api/base44Client';
 import { toast } from 'sonner';
 import { format, addDays, startOfDay, isSameDay } from 'date-fns';

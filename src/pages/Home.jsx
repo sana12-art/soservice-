@@ -5,9 +5,10 @@ import StorySection from '../components/landing/StorySection';
 import HowItWorksSection from '../components/landing/HowItWorksSection';
 import ServicesSection from '../components/landing/ServicesSection';
 import WhyUsSection from '../components/landing/WhyUsSection';
-import TestimonialsSection from '../components/landing/TestimonialsSection';
 import BookingSection from '../components/landing/BookingSection';
-import ClientsSection from '../components/landing/ClientsSection';
+import PartnersSection from '../components/landing/PartnersSection';
+
+
 import ContactSection from '../components/landing/ContactSection';
 import Footer from '../components/landing/Footer';
 import WhatsAppButton from '../components/landing/WhatsAppButton';
@@ -32,7 +33,9 @@ export default function Home() {
       <HowItWorksSection />
       <ServicesSection images={{ desk: IMAGES.desk, living: IMAGES.living, conference: IMAGES.conference, bathroom: IMAGES.bathroom, team: IMAGES.team, equipment: IMAGES.equipment, specialist: IMAGES.specialist }} />
       <WhyUsSection />
+      <PartnersSection />
       <BookingSection />
+
       <ContactSection />
       <Footer />
       <WhatsAppButton />

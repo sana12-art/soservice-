@@ -2,22 +2,12 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const featuredClients = [
-  {
-    name: 'Institut de France',
-    logo: 'https://upload.wikimedia.org/wikipedia/fr/thumb/b/b8/Institut_de_France.svg/320px-Institut_de_France.svg.png',
-  },
-  {
-    name: 'OpenClassrooms',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/OpenClassrooms_logo.svg/320px-OpenClassrooms_logo.svg.png',
-  },
-  {
-    name: 'Century 21',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Century_21_seal.svg/320px-Century_21_seal.svg.png',
-  },
-  {
-    name: 'France Langue',
-    logo: 'https://www.france-langue.fr/wp-content/themes/france-langue/img/logo-france-langue.png',
-  },
+  { name: 'KFC (Conflans)', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/KFC_logo.svg/512px-KFC_logo.svg.png' },
+  { name: 'Burger King', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Burger_King_Logo.svg/512px-Burger_King_Logo.svg.png' },
+  { name: "Fondation des amis de l’atelier", logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Logo_placeholder.svg/512px-Logo_placeholder.svg.png' },
+  { name: 'Salon de Varennes Noisy-le-Grand', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Logo_placeholder.svg/512px-Logo_placeholder.svg.png' },
+  { name: 'Planet Oc', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Logo_placeholder.svg/512px-Logo_placeholder.svg.png' },
+  { name: "Hôtel F1 Saint-Denis", logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Logo_placeholder.svg/512px-Logo_placeholder.svg.png' },
 ];
 
 const fadeUp = {
@@ -35,20 +25,13 @@ export default function ClientsSection() {
           viewport={{ once: true, margin: '-100px' }}
           className="text-center max-w-2xl mx-auto mb-16"
         >
-          <motion.span variants={fadeUp} custom={0} className="text-accent font-semibold text-sm tracking-widest uppercase font-body">
-            Ils nous font confiance
-          </motion.span>
-          <motion.h2 variants={fadeUp} custom={1} className="font-heading font-extrabold text-4xl md:text-5xl lg:text-6xl text-foreground leading-tight">
-            <span className="bg-gradient-to-r from-foreground via-primary to-accent bg-clip-text text-transparent">Plus de 60</span>
-            <br />
-            <span className="text-accent">partenaires</span>
-          </motion.h2>
-          <motion.p variants={fadeUp} custom={2} className="text-muted-foreground text-lg mt-4 font-body">
-            Des institutions, entreprises et associations de renom nous confient leurs espaces en Île-de-France.
-          </motion.p>
+          <motion.span
+            variants={fadeUp}
+            custom={0}
+            className="text-accent font-semibold text-sm tracking-widest uppercase font-body"
+          />
         </motion.div>
 
-        {/* 4 Featured Logos */}
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -66,9 +49,10 @@ export default function ClientsSection() {
                 src={client.logo}
                 alt={client.name}
                 className="max-h-12 max-w-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300 opacity-70 group-hover:opacity-100"
+                loading="lazy"
                 onError={(e) => {
-                  e.target.style.display = 'none';
-                  e.target.nextSibling.style.display = 'block';
+                  const imgEl = e.currentTarget;
+                  imgEl.style.display = 'none';
                 }}
               />
               <span className="hidden text-sm font-semibold text-foreground font-body text-center">{client.name}</span>
@@ -89,3 +73,4 @@ export default function ClientsSection() {
     </section>
   );
 }
+

@@ -53,7 +53,7 @@ href={link === 'Notre Histoire' ? '/notre-histoire' : link === 'Nos Valeurs' ? '
             <div className="space-y-3">
               <a href="https://wa.me/33786121538" className="group flex items-center gap-2 text-xs hover:text-accent transition-colors">
                 <Phone className="w-4 h-4 text-primary-foreground/70 group-hover:text-accent" />
-                <span className="text-primary-foreground/70 font-body group-hover:text-accent">07 86 12 15 38</span>
+                <span className="text-primary-foreground/70 font-body group-hover:text-accent">06 66 68 93 66 </span>
               </a>
               <div className="flex items-center gap-2 text-xs">
                 <Mail className="w-4 h-4 text-primary-foreground/70" />

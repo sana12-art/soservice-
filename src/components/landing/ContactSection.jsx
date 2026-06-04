@@ -79,7 +79,7 @@ export default function ContactSection() {
                 <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center">
                   <Phone className="w-4 h-4 text-accent" />
                 </div>
-              <span className="text-foreground font-body">07 86 12 15 38</span>
+              <span className="text-foreground font-body">06 66 68 93 66 </span>
               </div>
               <div className="flex items-center gap-4">
                 <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center">
@@ -157,7 +157,7 @@ export default function ContactSection() {
                   <Input
                     value={form.telephone}
                     onChange={e => setForm({ ...form, telephone: e.target.value })}
-                    placeholder="07 86 12 15 38"
+                    placeholder="06 66 68 93 66 "
                     className="h-12 rounded-xl"
                   />
                 </div>

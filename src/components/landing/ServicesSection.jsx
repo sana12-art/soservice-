@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Building2, Home, HardHat, Sparkles } from 'lucide-react';
+import { Building2, Home, HardHat, Sparkles, UtensilsCrossed } from 'lucide-react';
 import PriceCalculator from './PriceCalculator';
 import service1 from '@/assets/2.jpeg';
 import service2 from '@/assets/3.jpeg';
@@ -51,6 +51,12 @@ export default function ServicesSection() {
       title: 'Nettoyage et détachage de matelas et autres surfaces',
       desc: 'Nettoyage et détachage de matelas, rénovation de marbre. Techniques efficaces et respectueuses de l\'environnement.',
       image: service6,
+    },
+    {
+      icon: UtensilsCrossed,
+      title: 'Nettoyage de restaurants (cuisine/salle/hotte)',
+      desc: 'Nettoyage professionnel de restaurants : cuisine, salle, extraction/hotte, remise en état avant réouverture et entretien régulier. Interventions efficaces et conformité aux normes d\'hygiène.',
+      image: service2,
     }
   ];
 
@@ -161,7 +167,7 @@ Nous simplifions le nettoyage
               Vous ne savez pas quel service choisir ?
             </h3>
             <p className="text-primary-foreground/70 font-body">
-              Contactez Nova Clean, la référence du nettoyage en Seine et Marne (77) avec son réseau de professionnels.
+              Contactez SoServices, la référence du nettoyage avec son réseau de professionnels.
             </p>
           </div>
 

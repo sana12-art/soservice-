@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, MessageCircle } from 'lucide-react';
+import { X } from 'lucide-react';
 
 const WHATSAPP_NUMBER = '+33786121538'; // Site phone: 07 86 12 15 38
 const WHATSAPP_MESSAGE = encodeURIComponent('Bonjour SoService, je souhaite obtenir un devis pour un service de nettoyage.');
