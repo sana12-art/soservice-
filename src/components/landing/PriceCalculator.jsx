@@ -1,4 +1,4 @@
-timport React, { useState } from 'react';
+import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Calculator, Send, CheckCircle } from 'lucide-react';
 import { base44 } from '@/api/base44Client';
